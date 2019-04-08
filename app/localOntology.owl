@@ -1,0 +1,2402 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.owl-ontologies.com/CristianTalaveraVEHICLES.owl#"
+     xml:base="http://www.owl-ontologies.com/CristianTalaveraVEHICLES.owl"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:CristianTalaveraVEHICLESv2="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#">
+    <owl:Ontology rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl">
+        <rdfs:comment xml:lang="en">That ontology defines the objects and restrictions of the CristianTalavera&apos;s car manufacturing domain. Second version, created with Protege 5.2.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasBody -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasBody">
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#isBodyOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#VehicleChassis"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasBoss -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasBoss">
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#isBossOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasLevel0Boss -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasLevel0Boss">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasSuperior"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasSuperior"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasSuperior"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasLevel1or0Boss -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasLevel1or0Boss">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasSuperior"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasSuperior"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasLevel2or3Worker -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasLevel2or3Worker">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasSubordinate"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasSubordinate"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasLevel3Worker -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasLevel3Worker">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasSubordinate"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasSubordinate"/>
+            <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasSubordinate"/>
+        </owl:propertyChainAxiom>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasPart">
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#isPartOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Part"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasSubordinate -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasSubordinate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasSuperior -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasSuperior">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#isBodyOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#isBodyOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#VehicleChassis"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#isBossOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#isBossOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#isPartOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Part"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#worksWith -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#worksWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#cost -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#cost">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Part"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#VehicleChassis"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Expressed in K</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#dateOfManufacturing -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#dateOfManufacturing">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#VehicleChassis"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hp_cv -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hp_cv">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#id">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#VehicleChassis"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#load_capacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#load_capacity">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Expressed in K</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#max_speed -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#max_speed">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#passengers_capacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#passengers_capacity">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#sellPrice -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#sellPrice">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Expressed in K</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#weight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#weight">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Expressed in K</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Alternator -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Alternator">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Electronics"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Battery"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Bulb"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Starter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#AmericanPickup -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#AmericanPickup">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NamedVehicle"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasPart"/>
+                <owl:hasValue rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RearDrawerOld"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hp_cv"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#load_capacity"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Backbone -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Backbone">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#VehicleChassis"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Hybrid"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Ladder"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Monocoque"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Space"/>
+        <rdfs:comment xml:lang="en">A substantial central component is necessary for a backbone car chassis, connecting the front and rear of the entire frame</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Battery -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Battery">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Electronics"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Bulb"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Starter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Boss -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Boss">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasSubordinate"/>
+                        <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Bulb -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Bulb">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Electronics"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Starter"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Bumper -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Bumper">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#External"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Fender"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Hood"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SnowTire"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Wheel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Bus -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Bus">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasPart"/>
+                        <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Battery"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasPart"/>
+                        <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engine"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasPart"/>
+                        <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#FuelPump"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasPart"/>
+                        <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Seat"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasBody"/>
+                        <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Space"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasPart"/>
+                        <owl:hasValue rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#ConfortSeat"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#max_speed"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#passengers_capacity"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#sellPrice"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#weight"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">30</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#CheapVehicle -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#CheapVehicle">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#sellPrice"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minExclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</xsd:maxExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#CompactCar -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#CompactCar">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasBody"/>
+                        <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Monocoque"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#max_speed"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#passengers_capacity"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#sellPrice"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#weight"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Electronics -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Electronics">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Part"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#External"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Internal"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mechanics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engine -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engine">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mechanics"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#FuelPump"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Suspension"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Transmission"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Turbo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasSubordinate"/>
+                        <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Inspector"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasSuperior"/>
+                        <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Boss"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#ExpensiveVehicle -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#ExpensiveVehicle">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#sellPrice"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#External -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#External">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Part"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Internal"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mechanics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#FastVehicle -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#FastVehicle">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#max_speed"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Fender -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Fender">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#External"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Hood"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SnowTire"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Wheel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#FuelPump -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#FuelPump">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mechanics"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Suspension"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Transmission"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Turbo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#HighPowerVehicle -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#HighPowerVehicle">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hp_cv"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</xsd:minExclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Hood -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Hood">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#External"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SnowTire"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Wheel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Hybrid -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Hybrid">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#VehicleChassis"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Ladder"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Monocoque"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Space"/>
+        <rdfs:comment xml:lang="en">You will often find that a car chassis is not any single types, taking elements from a range of different types to create a version that is best suited to the car frame</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#IncompleteVehicle -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#IncompleteVehicle">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasPart"/>
+                        <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Wheel"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Inspector -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Inspector">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasSubordinate"/>
+                        <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mechanic"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasSuperior"/>
+                        <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Internal -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Internal">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Part"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mechanics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#ItalianMini -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#ItalianMini">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NamedVehicle"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hp_cv"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Ladder -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Ladder">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#VehicleChassis"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Monocoque"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Space"/>
+        <rdfs:comment xml:lang="en">A ladder frame car chassis is a common type of frame used as a base for vehicles, creating a solid base from the shape that the name suggests</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#LowPowerVehicle -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#LowPowerVehicle">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hp_cv"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mechanic -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mechanic">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasSuperior"/>
+                        <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Inspector"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mechanics -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mechanics">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Part"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#MidPowerVehicle -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#MidPowerVehicle">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hp_cv"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</xsd:minExclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Monocoque -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Monocoque">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#VehicleChassis"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Space"/>
+        <rdfs:comment xml:lang="en">A monocoque car chassis is one that uses metal that is molded from sheets of the material, which is the same method used to build other parts of the frame</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NamedVehicle -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NamedVehicle">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Part -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Part">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Pickup -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Pickup">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasPart"/>
+                        <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RearDrawer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RacingCar -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RacingCar">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasBody"/>
+                        <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Monocoque"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasPart"/>
+                        <owl:hasValue rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#CarbonHood"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasPart"/>
+                        <owl:hasValue rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RaceSuspension"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasPart"/>
+                        <owl:hasValue rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RaceTransmission7Gears"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasPart"/>
+                        <owl:hasValue rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RaceTurbo"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hp_cv"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#max_speed"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#passengers_capacity"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#sellPrice"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">95</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">170</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#weight"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RallyCar -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RallyCar">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NamedVehicle"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#max_speed"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RearDrawer -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RearDrawer">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#External"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Seat -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Seat">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Internal"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SeatBelt"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Speedometer"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SteeringWheel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SeatBelt -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SeatBelt">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Internal"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Speedometer"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SteeringWheel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SlowVehicle -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SlowVehicle">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#max_speed"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minExclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minExclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SnowCar -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SnowCar">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasPart"/>
+                                <owl:hasValue rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SnowTireChains"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasPart"/>
+                                <owl:hasValue rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SnowTireNails"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SnowTank -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SnowTank">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NamedVehicle"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasPart"/>
+                <owl:hasValue rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SnowTireChains"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hp_cv"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#weight"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">700</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SnowTire -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SnowTire">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#External"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Wheel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Space -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Space">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#VehicleChassis"/>
+        <rdfs:comment xml:lang="en">A space chassis can also be known as tubular even though it is not tubular in the true sense. The components are welded together to create a strong frame that comprises some flexibility</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Speedometer -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Speedometer">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Internal"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SteeringWheel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Starter -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Starter">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Electronics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SteeringWheel -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SteeringWheel">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Internal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Suspension -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Suspension">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mechanics"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Transmission"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Turbo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TestCar -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TestCar">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NamedVehicle"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasPart"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Wheel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Transmission -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Transmission">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mechanics"/>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Turbo"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Truck -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Truck">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasBody"/>
+                        <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Backbone"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasPart"/>
+                        <owl:hasValue rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TruckEngine"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasPart"/>
+                        <owl:hasValue rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TruckSuspension"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasPart"/>
+                        <owl:hasValue rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TruckTransmission"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasPart"/>
+                        <owl:hasValue rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TruckTurbo"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasPart"/>
+                        <owl:hasValue rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#UltraConfortSeat"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#load_capacity"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#passengers_capacity"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#sellPrice"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">240</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#weight"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">65</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Turbo -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Turbo">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mechanics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Van -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Van">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasBody"/>
+                        <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Space"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#hasPart"/>
+                        <owl:hasValue rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#ConfortSeat"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#load_capacity"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#passengers_capacity"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#sellPrice"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</xsd:minInclusive>
+                                    </rdf:Description>
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#VehicleChassis -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#VehicleChassis">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Wheel -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Wheel">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#External"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#AluminiumBumper -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#AluminiumBumper">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Bumper"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#AluminiumFender -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#AluminiumFender">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Fender"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">130</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#AnalogSpeedometer -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#AnalogSpeedometer">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Speedometer"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#AutoStarter -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#AutoStarter">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Starter"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#BackboneLigth -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#BackboneLigth">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Backbone"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4500</CristianTalaveraVEHICLESv2:cost>
+        <CristianTalaveraVEHICLESv2:dateOfManufacturing rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-10-18</CristianTalaveraVEHICLESv2:dateOfManufacturing>
+        <CristianTalaveraVEHICLESv2:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DKSJDH23O42343423LH</CristianTalaveraVEHICLESv2:id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#BackboneResistant -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#BackboneResistant">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Backbone"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5500</CristianTalaveraVEHICLESv2:cost>
+        <CristianTalaveraVEHICLESv2:dateOfManufacturing rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-10-01</CristianTalaveraVEHICLESv2:dateOfManufacturing>
+        <CristianTalaveraVEHICLESv2:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KKDSJH22KHK2JHK332H</CristianTalaveraVEHICLESv2:id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#BackboneThermal -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#BackboneThermal">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Backbone"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000</CristianTalaveraVEHICLESv2:cost>
+        <CristianTalaveraVEHICLESv2:dateOfManufacturing rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-10-06</CristianTalaveraVEHICLESv2:dateOfManufacturing>
+        <CristianTalaveraVEHICLESv2:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KJH432K4JHFMSK2HG34</CristianTalaveraVEHICLESv2:id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#BigBattery -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#BigBattery">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Battery"/>
+        <CristianTalaveraVEHICLESv2:isPartOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle4"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">260</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#BigFuelPump -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#BigFuelPump">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#FuelPump"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#BigWheel -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#BigWheel">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Wheel"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#CarbonBumper -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#CarbonBumper">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Bumper"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">360</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#CarbonFender -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#CarbonFender">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Fender"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">190</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#CarbonHood -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#CarbonHood">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Hood"/>
+        <CristianTalaveraVEHICLESv2:isPartOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle4"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">180</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#ConfortSeat -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#ConfortSeat">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Seat"/>
+        <CristianTalaveraVEHICLESv2:isPartOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle1"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">360</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#ConfortSuspension -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#ConfortSuspension">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Suspension"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#ConfortWheel -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#ConfortWheel">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Wheel"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#DigitalSpeedometer -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#DigitalSpeedometer">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Speedometer"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#ECOEngine -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#ECOEngine">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engine"/>
+        <CristianTalaveraVEHICLESv2:isPartOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle4"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5500</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#ECOTurbo -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#ECOTurbo">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Turbo"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1100</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer1">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <CristianTalaveraVEHICLESv2:hasBoss rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TheBoss0"/>
+        <CristianTalaveraVEHICLESv2:hasBoss rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TheBoss1"/>
+        <CristianTalaveraVEHICLESv2:hasSubordinate rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp1"/>
+        <CristianTalaveraVEHICLESv2:hasSubordinate rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp2"/>
+        <CristianTalaveraVEHICLESv2:hasSuperior rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TheBoss0"/>
+        <CristianTalaveraVEHICLESv2:hasSuperior rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TheBoss1"/>
+        <CristianTalaveraVEHICLESv2:worksWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer2"/>
+        <CristianTalaveraVEHICLESv2:worksWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer2">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <CristianTalaveraVEHICLESv2:hasBoss rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TheBoss0"/>
+        <CristianTalaveraVEHICLESv2:hasBoss rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TheBoss1"/>
+        <CristianTalaveraVEHICLESv2:hasSubordinate rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp3"/>
+        <CristianTalaveraVEHICLESv2:hasSuperior rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TheBoss0"/>
+        <CristianTalaveraVEHICLESv2:hasSuperior rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TheBoss1"/>
+        <CristianTalaveraVEHICLESv2:worksWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer3">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <CristianTalaveraVEHICLESv2:hasBoss rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TheBoss0"/>
+        <CristianTalaveraVEHICLESv2:hasBoss rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TheBoss1"/>
+        <CristianTalaveraVEHICLESv2:hasSubordinate rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp4"/>
+        <CristianTalaveraVEHICLESv2:hasSuperior rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TheBoss0"/>
+        <CristianTalaveraVEHICLESv2:hasSuperior rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TheBoss1"/>
+        <CristianTalaveraVEHICLESv2:worksWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#HybridBackboneLadder -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#HybridBackboneLadder">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Hybrid"/>
+        <CristianTalaveraVEHICLESv2:isBodyOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle2"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3400</CristianTalaveraVEHICLESv2:cost>
+        <CristianTalaveraVEHICLESv2:dateOfManufacturing rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-10-15</CristianTalaveraVEHICLESv2:dateOfManufacturing>
+        <CristianTalaveraVEHICLESv2:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KJH324KHJ23KJ2H3KJF</CristianTalaveraVEHICLESv2:id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#HybridLadderSpace -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#HybridLadderSpace">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Hybrid"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5600</CristianTalaveraVEHICLESv2:cost>
+        <CristianTalaveraVEHICLESv2:dateOfManufacturing rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-10-12</CristianTalaveraVEHICLESv2:dateOfManufacturing>
+        <CristianTalaveraVEHICLESv2:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KJH43KJ2HKFJHKFJSAH</CristianTalaveraVEHICLESv2:id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#HybridMonocoqueLadder -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#HybridMonocoqueLadder">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Hybrid"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6200</CristianTalaveraVEHICLESv2:cost>
+        <CristianTalaveraVEHICLESv2:dateOfManufacturing rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-10-23</CristianTalaveraVEHICLESv2:dateOfManufacturing>
+        <CristianTalaveraVEHICLESv2:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DSKJFHKJ2H3KJHFKJSA</CristianTalaveraVEHICLESv2:id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp1">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Inspector"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <CristianTalaveraVEHICLESv2:hasSubordinate rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec1"/>
+        <CristianTalaveraVEHICLESv2:hasSubordinate rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec2"/>
+        <CristianTalaveraVEHICLESv2:hasSuperior rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer1"/>
+        <CristianTalaveraVEHICLESv2:worksWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp2"/>
+        <CristianTalaveraVEHICLESv2:worksWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp3"/>
+        <CristianTalaveraVEHICLESv2:worksWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp2">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Inspector"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <CristianTalaveraVEHICLESv2:hasSubordinate rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec3"/>
+        <CristianTalaveraVEHICLESv2:hasSuperior rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer1"/>
+        <CristianTalaveraVEHICLESv2:worksWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp3"/>
+        <CristianTalaveraVEHICLESv2:worksWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp3">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Inspector"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <CristianTalaveraVEHICLESv2:hasSubordinate rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec4"/>
+        <CristianTalaveraVEHICLESv2:hasSubordinate rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec5"/>
+        <CristianTalaveraVEHICLESv2:hasSuperior rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer2"/>
+        <CristianTalaveraVEHICLESv2:worksWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp4">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Inspector"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <CristianTalaveraVEHICLESv2:hasSubordinate rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec6"/>
+        <CristianTalaveraVEHICLESv2:hasSuperior rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#LEDBulb -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#LEDBulb">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Bulb"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#LadderNew -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#LadderNew">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Ladder"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7000</CristianTalaveraVEHICLESv2:cost>
+        <CristianTalaveraVEHICLESv2:dateOfManufacturing rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-10-06</CristianTalaveraVEHICLESv2:dateOfManufacturing>
+        <CristianTalaveraVEHICLESv2:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KJHKJHKJHFKJDSH3234</CristianTalaveraVEHICLESv2:id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#LadderOld -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#LadderOld">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Ladder"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</CristianTalaveraVEHICLESv2:cost>
+        <CristianTalaveraVEHICLESv2:dateOfManufacturing rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-10-12</CristianTalaveraVEHICLESv2:dateOfManufacturing>
+        <CristianTalaveraVEHICLESv2:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KJH2K3JHFSAAOI29AF</CristianTalaveraVEHICLESv2:id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#LigthHood -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#LigthHood">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Hood"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec1">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <CristianTalaveraVEHICLESv2:hasSuperior rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp1"/>
+        <CristianTalaveraVEHICLESv2:worksWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec2"/>
+        <CristianTalaveraVEHICLESv2:worksWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec3"/>
+        <CristianTalaveraVEHICLESv2:worksWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec4"/>
+        <CristianTalaveraVEHICLESv2:worksWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec5"/>
+        <CristianTalaveraVEHICLESv2:worksWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec2">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <CristianTalaveraVEHICLESv2:hasSuperior rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp1"/>
+        <CristianTalaveraVEHICLESv2:worksWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec3"/>
+        <CristianTalaveraVEHICLESv2:worksWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec4"/>
+        <CristianTalaveraVEHICLESv2:worksWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec5"/>
+        <CristianTalaveraVEHICLESv2:worksWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec3">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <CristianTalaveraVEHICLESv2:hasSuperior rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp2"/>
+        <CristianTalaveraVEHICLESv2:worksWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec4"/>
+        <CristianTalaveraVEHICLESv2:worksWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec5"/>
+        <CristianTalaveraVEHICLESv2:worksWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec4">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <CristianTalaveraVEHICLESv2:hasSuperior rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp3"/>
+        <CristianTalaveraVEHICLESv2:worksWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec5"/>
+        <CristianTalaveraVEHICLESv2:worksWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec5">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <CristianTalaveraVEHICLESv2:hasSuperior rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp3"/>
+        <CristianTalaveraVEHICLESv2:worksWith rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec6"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Mec6">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <CristianTalaveraVEHICLESv2:hasSuperior rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#MonocoqueAluminium -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#MonocoqueAluminium">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Monocoque"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8500</CristianTalaveraVEHICLESv2:cost>
+        <CristianTalaveraVEHICLESv2:dateOfManufacturing rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-10-17</CristianTalaveraVEHICLESv2:dateOfManufacturing>
+        <CristianTalaveraVEHICLESv2:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAKJFHKJH34KJHFAKS</CristianTalaveraVEHICLESv2:id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#MonocoqueCarbon -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#MonocoqueCarbon">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Monocoque"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9000</CristianTalaveraVEHICLESv2:cost>
+        <CristianTalaveraVEHICLESv2:dateOfManufacturing rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-10-04</CristianTalaveraVEHICLESv2:dateOfManufacturing>
+        <CristianTalaveraVEHICLESv2:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KJHSAKDJHF2HUKJHKJF</CristianTalaveraVEHICLESv2:id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#MonocoqueMetal -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#MonocoqueMetal">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Monocoque"/>
+        <CristianTalaveraVEHICLESv2:isBodyOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle3"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7000</CristianTalaveraVEHICLESv2:cost>
+        <CristianTalaveraVEHICLESv2:dateOfManufacturing rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-10-11</CristianTalaveraVEHICLESv2:dateOfManufacturing>
+        <CristianTalaveraVEHICLESv2:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FDKSAHFKJH32432KJH</CristianTalaveraVEHICLESv2:id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalAlternator -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalAlternator">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Alternator"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalBattery -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalBattery">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Battery"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">140</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalBulb -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalBulb">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Bulb"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalBumper -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalBumper">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Bumper"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">260</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalEngine -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalEngine">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engine"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3500</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalFender -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalFender">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Fender"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalFuelPump -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalFuelPump">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#FuelPump"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalHood -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalHood">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Hood"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">140</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalSeat -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalSeat">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Seat"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">245</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalSeatBelt -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalSeatBelt">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SeatBelt"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalStarter -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalStarter">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Starter"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalSteeringWheel -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalSteeringWheel">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SteeringWheel"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalSuspension -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalSuspension">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Suspension"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalTurbo -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#NormalTurbo">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Turbo"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#PlasticSteeringWheel -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#PlasticSteeringWheel">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SteeringWheel"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RaceAlternator -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RaceAlternator">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Alternator"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">125</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RaceEngine -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RaceEngine">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engine"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12000</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RaceFuelPump -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RaceFuelPump">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#FuelPump"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">240</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RaceSteeringWheel -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RaceSteeringWheel">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SteeringWheel"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">105</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RaceSuspension -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RaceSuspension">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Suspension"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RaceTransmission7Gears -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RaceTransmission7Gears">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Transmission"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7800</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RaceTurbo -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RaceTurbo">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Turbo"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2600</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RaceWheel -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RaceWheel">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Wheel"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RearDrawerOld -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RearDrawerOld">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RearDrawer"/>
+        <CristianTalaveraVEHICLESv2:isPartOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle2"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SecureSeatBelt -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SecureSeatBelt">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SeatBelt"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SmallBattery -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SmallBattery">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Battery"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SmartSpeedometer -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SmartSpeedometer">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Speedometer"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">205</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SnowTireChains -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SnowTireChains">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SnowTire"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SnowTireNails -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SnowTireNails">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SnowTire"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SpaceUltraLigth -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SpaceUltraLigth">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Space"/>
+        <CristianTalaveraVEHICLESv2:isBodyOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle1"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6700</CristianTalaveraVEHICLESv2:cost>
+        <CristianTalaveraVEHICLESv2:dateOfManufacturing rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-10-11</CristianTalaveraVEHICLESv2:dateOfManufacturing>
+        <CristianTalaveraVEHICLESv2:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FKDSAJHKJHKJH2KJ43</CristianTalaveraVEHICLESv2:id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SpaceUltraSecure -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SpaceUltraSecure">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Space"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7100</CristianTalaveraVEHICLESv2:cost>
+        <CristianTalaveraVEHICLESv2:dateOfManufacturing rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-10-26</CristianTalaveraVEHICLESv2:dateOfManufacturing>
+        <CristianTalaveraVEHICLESv2:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HKFJASDHKJHIUH432KH</CristianTalaveraVEHICLESv2:id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TheBoss0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TheBoss0">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <CristianTalaveraVEHICLESv2:hasSubordinate rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer1"/>
+        <CristianTalaveraVEHICLESv2:hasSubordinate rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer2"/>
+        <CristianTalaveraVEHICLESv2:hasSubordinate rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer3"/>
+        <CristianTalaveraVEHICLESv2:isBossOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp1"/>
+        <CristianTalaveraVEHICLESv2:isBossOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp2"/>
+        <CristianTalaveraVEHICLESv2:isBossOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp3"/>
+        <CristianTalaveraVEHICLESv2:isBossOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TheBoss1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TheBoss1">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Person"/>
+        <CristianTalaveraVEHICLESv2:hasSubordinate rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer1"/>
+        <CristianTalaveraVEHICLESv2:hasSubordinate rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer2"/>
+        <CristianTalaveraVEHICLESv2:hasSubordinate rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engineer3"/>
+        <CristianTalaveraVEHICLESv2:isBossOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp1"/>
+        <CristianTalaveraVEHICLESv2:isBossOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp2"/>
+        <CristianTalaveraVEHICLESv2:isBossOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp3"/>
+        <CristianTalaveraVEHICLESv2:isBossOf rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Insp4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Transmission4Gears -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Transmission4Gears">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Transmission"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1200</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Transmission5Gears -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Transmission5Gears">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Transmission"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1600</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Transmission6Gears -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Transmission6Gears">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Transmission"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1800</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TruckEngine -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TruckEngine">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Engine"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TruckSuspension -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TruckSuspension">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Suspension"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">480</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TruckTransmission -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TruckTransmission">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Transmission"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3500</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TruckTurbo -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#TruckTurbo">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Turbo"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2900</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#UltraConfortSeat -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#UltraConfortSeat">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Seat"/>
+        <CristianTalaveraVEHICLESv2:cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">440</CristianTalaveraVEHICLESv2:cost>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle1">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+        <CristianTalaveraVEHICLESv2:hasBody rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SpaceUltraLigth"/>
+        <CristianTalaveraVEHICLESv2:hasPart rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#ConfortSeat"/>
+        <CristianTalaveraVEHICLESv2:hasPart rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SnowTireChains"/>
+        <CristianTalaveraVEHICLESv2:hp_cv rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">260</CristianTalaveraVEHICLESv2:hp_cv>
+        <CristianTalaveraVEHICLESv2:load_capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</CristianTalaveraVEHICLESv2:load_capacity>
+        <CristianTalaveraVEHICLESv2:passengers_capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</CristianTalaveraVEHICLESv2:passengers_capacity>
+        <CristianTalaveraVEHICLESv2:sellPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</CristianTalaveraVEHICLESv2:sellPrice>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle2">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+        <CristianTalaveraVEHICLESv2:hasBody rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#HybridBackboneLadder"/>
+        <CristianTalaveraVEHICLESv2:hasPart rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#RearDrawerOld"/>
+        <CristianTalaveraVEHICLESv2:hp_cv rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</CristianTalaveraVEHICLESv2:hp_cv>
+        <CristianTalaveraVEHICLESv2:load_capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</CristianTalaveraVEHICLESv2:load_capacity>
+        <CristianTalaveraVEHICLESv2:passengers_capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</CristianTalaveraVEHICLESv2:passengers_capacity>
+        <CristianTalaveraVEHICLESv2:sellPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</CristianTalaveraVEHICLESv2:sellPrice>
+        <CristianTalaveraVEHICLESv2:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</CristianTalaveraVEHICLESv2:weight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle3">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+        <CristianTalaveraVEHICLESv2:hasBody rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#MonocoqueMetal"/>
+        <CristianTalaveraVEHICLESv2:hasPart rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SnowTireNails"/>
+        <CristianTalaveraVEHICLESv2:hp_cv rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</CristianTalaveraVEHICLESv2:hp_cv>
+        <CristianTalaveraVEHICLESv2:max_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</CristianTalaveraVEHICLESv2:max_speed>
+        <CristianTalaveraVEHICLESv2:passengers_capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</CristianTalaveraVEHICLESv2:passengers_capacity>
+        <CristianTalaveraVEHICLESv2:sellPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</CristianTalaveraVEHICLESv2:sellPrice>
+        <CristianTalaveraVEHICLESv2:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</CristianTalaveraVEHICLESv2:weight>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle4">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+        <CristianTalaveraVEHICLESv2:hasPart rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#BigBattery"/>
+        <CristianTalaveraVEHICLESv2:hasPart rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#CarbonHood"/>
+        <CristianTalaveraVEHICLESv2:hasPart rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#ECOEngine"/>
+        <CristianTalaveraVEHICLESv2:hp_cv rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">140</CristianTalaveraVEHICLESv2:hp_cv>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle5">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#Vehicle"/>
+        <CristianTalaveraVEHICLESv2:hasBody rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#MonocoqueAluminium"/>
+        <CristianTalaveraVEHICLESv2:hasPart rdf:resource="http://www.owl-ontologies.com/CristianTalaveraVEHICLESv2.owl#SnowTireNails"/>
+        <CristianTalaveraVEHICLESv2:hp_cv rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">800</CristianTalaveraVEHICLESv2:hp_cv>
+        <CristianTalaveraVEHICLESv2:load_capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</CristianTalaveraVEHICLESv2:load_capacity>
+        <CristianTalaveraVEHICLESv2:max_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</CristianTalaveraVEHICLESv2:max_speed>
+        <CristianTalaveraVEHICLESv2:sellPrice rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</CristianTalaveraVEHICLESv2:sellPrice>
+        <CristianTalaveraVEHICLESv2:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</CristianTalaveraVEHICLESv2:weight>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

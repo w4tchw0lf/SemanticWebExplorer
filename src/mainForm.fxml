@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane fx:id="tabPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+    <tabs>
+        <Tab fx:id="tabPrincipal" text="Principal">
+            <content>
+                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                    <top>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <TextField fx:id="txtSearch" HBox.hgrow="ALWAYS">
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                    <HBox.margin>
+                                        <Insets right="20.0" />
+                                    </HBox.margin>
+                                </TextField>
+                                <Button fx:id="btnSearch" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Search">
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                </Button>
+                        <Button fx:id="btnClear" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Clear">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btnCancel" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Cancel">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <ProgressIndicator fx:id="progressIndicator" prefHeight="20.0" prefWidth="40.0">
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                        </ProgressIndicator>
+                        <Label fx:id="lblNetwork" text="Offline" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets left="20.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="Arial Black" size="13.0" />
+                           </font>
+                        </Label>
+                            </children>
+                            <opaqueInsets>
+                                <Insets left="20.0" right="20.0" />
+                            </opaqueInsets>
+                            <padding>
+                                <Insets left="30.0" right="30.0" />
+                            </padding>
+                        </HBox>
+                    </top>
+                    <center>
+                        <TableView fx:id="tableResults" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <columns>
+                                <TableColumn fx:id="colClass" prefWidth="300.0" text="Class" />
+                                <TableColumn fx:id="colIndividual" prefWidth="300.0" text="Individual" />
+                                <TableColumn fx:id="colObjectProperty" prefWidth="300.0" text="Property" />
+                        <TableColumn fx:id="colData" prefWidth="300.0" text="Value" />
+                            </columns>
+                        </TableView>
+                    </center>
+                </BorderPane>
+            </content>
+        </Tab>
+        <Tab fx:id="tabHistory" text="History">
+            <content>
+                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                    <center>
+                        <TableView fx:id="tableHistory" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                            <columns>
+                                <TableColumn fx:id="colDate" prefWidth="350.0" text="Date" />
+                                <TableColumn fx:id="colSearch" prefWidth="350.0" text="Search" />
+                        <TableColumn fx:id="colRows" prefWidth="100.0" text="Rows" />
+                        <TableColumn fx:id="colTime" prefWidth="100.0" text="Time (secs.)" />
+                            </columns>
+                        </TableView>
+                    </center>
+                </BorderPane>
+            </content>
+        </Tab>
+      <Tab fx:id="tabHistory1" text="Configuration">
+         <content>
+            <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+              <items>
+                  <TitledPane prefHeight="170.0" prefWidth="200.0" text="Search">
+                     <content>
+                        <VBox prefHeight="170.0" prefWidth="100.0">
+                           <children>
+                              <Label contentDisplay="RIGHT" text="Limit">
+                                 <graphic>
+                                    <TextField fx:id="txtLimit" text="100" />
+                                 </graphic>
+                              </Label>
+                              <RadioButton fx:id="rbtnRegex" mnemonicParsing="false" text="RegEx">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbtnContains" mnemonicParsing="false" text="Contains Text">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbtnExactly" mnemonicParsing="false" text="Exactly">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                           </children>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+                  <TitledPane animated="false" text="SPARQL Endpoints">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <RadioButton fx:id="rbtnDBpedia" mnemonicParsing="false" text="DBpedia">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbtnUniProt" mnemonicParsing="false" text="UniProt">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton fx:id="rbtnWikiData" mnemonicParsing="false" text="WikiData">
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </RadioButton>
+                           </children>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+              </items>
+            </SplitPane>
+         </content>
+      </Tab>
+    </tabs>
+</TabPane>
