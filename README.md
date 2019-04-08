@@ -4,23 +4,26 @@ SemanticWebExplorer is an proof of concept designed to query some SPARQL endpoin
 
 # Example
 
+### Principal Tab
 ![Screenshot](images/screenshot_0.png "Principal Tab")
 
+### History Tab
 ![Screenshot](images/screenshot_1.png "History Tab")
 
+### Config Tab
 ![Screenshot](images/screenshot_2.png "Config Tab")
 
 # Usage
 
-## Installation
+## Download
 
 ```bash
 
-git clone <test>
+git clone https://github.com/w4tchw0lf/SemanticWebExplorer.git
 
 ```
 
-## Execution
+## Execute
 
 ```bash
 
