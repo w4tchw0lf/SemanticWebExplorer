@@ -28,7 +28,6 @@ git clone https://github.com/w4tchw0lf/SemanticWebExplorer.git
 ```bash
 
 cd app
-
 java -jar SemanticWebExplorer.jar
 
 ```
